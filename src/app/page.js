@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "./page.module.css";
+// import styles from "./page.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
@@ -10,7 +10,7 @@ export default function Home() {
     router.push(pathName);
   };
   return (
-    <div className={styles.page}>
+    <div>
       <h1>Hello Nex js App</h1>
       <User name="Ashwini" />
 
