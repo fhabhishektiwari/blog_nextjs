@@ -5,7 +5,7 @@ export default function Customuser() {
     <div>
       <h1 className={custom.main}>Heading 1 custom User Page</h1>
       <h2 className={outside.main}>Heading 1 custom User Page</h2>
-      <p className="main">This is paragraph</p>
+      <p className="main">This is paragraphhhhhhhhhhhhhh.</p>
     </div>
   );
 }
