@@ -4,6 +4,13 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: "100",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   const router = useRouter();
@@ -12,7 +19,7 @@ export default function Home() {
   };
   return (
     <div>
-      <h1>Hello Nex js App</h1>
+      <h1 className={roboto.className}>Hello Nex js App</h1>
       <User name="Ashwini" />
 
       <User name="Nishant" />
@@ -28,7 +35,7 @@ export default function Home() {
       {/* {Counter()}//avoid to use */}
 
       {/* Image Optimization */}
-      <Image
+      {/* <Image
         src={
           "https://images.unsplash.com/photo-1559981421-3e0c0d712e3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5pbWV8ZW58MHx8MHx8fDA%3D"
         }
@@ -37,7 +44,18 @@ export default function Home() {
         alt="anime image"
       />
 
-      <img src="https://images.unsplash.com/photo-1559981421-3e0c0d712e3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5pbWV8ZW58MHx8MHx8fDA%3D" />
+      <img src="https://images.unsplash.com/photo-1559981421-3e0c0d712e3b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW5pbWV8ZW58MHx8MHx8fDA%3D" /> */}
+
+      {/* <h1
+        style={{
+          fontFamily: "Roboto",
+          fontWeight: 100,
+        }}
+      >
+        Heading with roboto font family
+      </h1> */}
+
+      <h1 className={roboto.className}>Heading with roboto font family</h1>
     </div>
   );
 }
